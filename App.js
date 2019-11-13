@@ -6,109 +6,61 @@
  * @flow
  */
 
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
   View,
   Text,
-  StatusBar,
+  FlatList,
+  Image,
+  TouchableOpacity,
+  Dimensions,
 } from 'react-native';
+import Unsplash, {toJson} from 'unsplash-js';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+const {width} = Dimensions.get('window');
 
-const App: () => React$Node = () => {
+const App = () => {
+  const [listImage, setListImage] = useState([]);
+
+  useEffect(() => {
+    const unsplash = new Unsplash({
+      accessKey:
+        '13ff6331fa5d44c2fff1bade0ab68eda4946dc5be59648e9730b219fd219ccb8',
+    });
+    unsplash.search
+      .photos('dogs', 1, 1000, {orientation: 'portrait'})
+      .then(toJson)
+      .then(res => {
+        console.log('================================================');
+        console.log('res', res);
+        console.log('================================================');
+        setListImage(res.results);
+      });
+  }, []);
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <View style={{flex: 1}}>
+      <FlatList
+        data={listImage}
+        numColumns={3}
+        keyExtractor={(item, index) => `Image-${index}`}
+        extraData={listImage}
+        renderItem={({item, index}) => {
+          return (
+            <TouchableOpacity style={{flex: 1}}>
+              <Image
+                source={{uri: item.urls.full}}
+                resizeMode="stretch"
+                style={{width: width / 3, height: (width / 3) * 1.5}}
+              />
+            </TouchableOpacity>
+          );
+        }}
+      />
+    </View>
   );
 };
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
+const styles = StyleSheet.create({});
 
 export default App;
