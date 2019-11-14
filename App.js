@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import {
   StyleSheet,
   View,
@@ -7,15 +7,18 @@ import {
   Image,
   TouchableOpacity,
   Dimensions,
+  ToastAndroid,
 } from 'react-native'
 import Unsplash, { toJson } from 'unsplash-js'
-import WallPaperManager from 'react-native-wallpaper-manager'
-// import FastImage from 'react-native-fast-image'
+import FastImage from 'react-native-fast-image'
+import RNWalle from 'react-native-walle'
+import ActionSheet from 'react-native-actionsheet'
 
 const { width } = Dimensions.get('window')
 
 const App = () => {
   const [listImage, setListImage] = useState([])
+  const actionsheetRef = useRef(null)
 
   useEffect(() => {
     const unsplash = new Unsplash({
@@ -28,17 +31,30 @@ const App = () => {
       .then((res) => {
         setListImage(res.results)
       })
-
-    WallPaperManager.setWallpaper(
-      {
-        uri:
-          'https://images.pexels.com/photos/3178881/pexels-photo-3178881.jpeg',
-      },
-      res => console.log(res),
-    )
   }, [])
 
-  const handleViewImage = (image) => {}
+  const handleSetWallpaper = (image) => {
+    console.tron.log({ image })
+    RNWalle.setWallPaper(image?.urls?.regular, 'system', (res) => {
+      if (res === 'success') {
+        showToastMessage('Home screen wallpaper applied')
+      }
+    })
+  }
+  const showToastMessage = (message) => {
+    if (!message) {
+      return
+    }
+
+    ToastAndroid.showWithGravity(
+      message,
+      ToastAndroid.SHORT,
+      ToastAndroid.BOTTOM,
+    )
+  }
+  const handleShowActionsheet = (image) => {
+    actionsheetRef.current.show()
+  }
 
   return (
     <View style={{ flex: 1 }}>
@@ -50,16 +66,25 @@ const App = () => {
         extraData={listImage}
         renderItem={({ item, index }) => (
           <TouchableOpacity
-            onPress={() => handleViewImage(item)}
+            onPress={() => handleShowActionsheet(item)}
             style={{ flex: 1 }}
+            activeOpacity={0.5}
           >
-            <Image
-              source={{ uri: item.urls.full }}
-              resizeMode="stretch"
+            <FastImage
+              source={{ uri: item.urls.small }}
+              resizeMode={FastImage.resizeMode.stretch}
               style={{ width: width / 3, height: (width / 3) * 1.5 }}
             />
           </TouchableOpacity>
         )}
+      />
+      <ActionSheet
+        ref={actionsheetRef}
+        title="Which one do you like ?"
+        options={['Apple', 'Banana', 'cancel']}
+        cancelButtonIndex={2}
+        destructiveButtonIndex={1}
+        onPress={(index) => { /* do something */ }}
       />
     </View>
   )
