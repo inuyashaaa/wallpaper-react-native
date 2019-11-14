@@ -55,7 +55,7 @@ const App = () => {
           <TouchableOpacity
             onPress={() => handleShowActionsheet(item)}
             style={{ flex: 1 }}
-            activeOpacity={0.5}
+            activeOpacity={0.9}
           >
             <FastImage
               source={{ uri: item.urls.small }}

@@ -4,8 +4,7 @@ import {
   ToastAndroid,
 } from 'react-native'
 
-
-const uniqueId = DeviceInfo.getUniqueID()
+const uniqueId = DeviceInfo.getUniqueId()
 const osType = Platform.OS
 const osVersion = DeviceInfo.getSystemVersion()
 const appVersion = DeviceInfo.getVersion()
