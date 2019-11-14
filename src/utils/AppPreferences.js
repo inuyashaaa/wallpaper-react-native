@@ -1,5 +1,9 @@
 import DeviceInfo from 'react-native-device-info'
-import { Platform } from 'react-native'
+import {
+  Platform,
+  ToastAndroid,
+} from 'react-native'
+
 
 const uniqueId = DeviceInfo.getUniqueID()
 const osType = Platform.OS
@@ -33,19 +37,16 @@ const AppPreferences = {
       return null
     }
   },
-  getRandom: (arr, n) => {
-    const result = new Array(n)
-    let len = arr.length
-    const taken = new Array(len)
-    if (n > len) { n = len }
-    while (n--) {
-      const x = Math.floor(Math.random() * len)
-      result[n] = arr[x in taken ? taken[x] : x]
-      taken[x] = --len in taken ? taken[len] : len
+  showToastMessage: (message) => {
+    if (!message) {
+      return
     }
-    return result
+    ToastAndroid.showWithGravity(
+      message,
+      ToastAndroid.SHORT,
+      ToastAndroid.BOTTOM,
+    )
   },
-  secondsToMinutes: (time = 0) => `${`0${Math.floor(time / 60)}`.slice(-2)}:${`0${Math.floor(time % 60)}`.slice(-2)}`,
 }
 
 export default AppPreferences

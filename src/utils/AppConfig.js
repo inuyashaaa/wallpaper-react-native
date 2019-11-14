@@ -1,8 +1,6 @@
 const AppConfig = {
   API_URL: 'http://exam.soelearning.com/api',
-  ASSETS_URL: 'http://exam.soelearning.com',
-  TOKEN: 'pBbxz2EnNjhEk0ZA88lztVvaFnhozMshTRJXlBUYvPRHsgiNxkYzjreImNPn',
-  ALPHABET: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'V', 'X', 'Y', 'Z'],
+  API_ACCESS_KEY: '13ff6331fa5d44c2fff1bade0ab68eda4946dc5be59648e9730b219fd219ccb8',
 }
 
 export default AppConfig

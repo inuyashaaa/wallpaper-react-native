@@ -5,12 +5,13 @@ import {
   FlatList,
   TouchableOpacity,
   Dimensions,
-  ToastAndroid,
 } from 'react-native'
 import Unsplash, { toJson } from 'unsplash-js'
 import FastImage from 'react-native-fast-image'
 import RNWalle from 'react-native-walle'
 import ActionSheet from 'react-native-actionsheet'
+import AppConfig from '../utils/AppConfig'
+import AppPreferences from '../utils/AppPreferences'
 
 const { width } = Dimensions.get('window')
 
@@ -20,8 +21,7 @@ const App = () => {
 
   useEffect(() => {
     const unsplash = new Unsplash({
-      accessKey:
-        '13ff6331fa5d44c2fff1bade0ab68eda4946dc5be59648e9730b219fd219ccb8',
+      accessKey: AppConfig.API_ACCESS_KEY,
     })
     unsplash.search
       .photos('dogs', 1, 100, { orientation: 'portrait' })
@@ -35,20 +35,9 @@ const App = () => {
     console.tron.log({ image })
     RNWalle.setWallPaper(image?.urls?.regular, 'system', (res) => {
       if (res === 'success') {
-        showToastMessage('Home screen wallpaper applied')
+        AppPreferences.showToastMessage('Home screen wallpaper applied')
       }
     })
-  }
-  const showToastMessage = (message) => {
-    if (!message) {
-      return
-    }
-
-    ToastAndroid.showWithGravity(
-      message,
-      ToastAndroid.SHORT,
-      ToastAndroid.BOTTOM,
-    )
   }
   const handleShowActionsheet = (image) => {
     actionsheetRef.current.show()
