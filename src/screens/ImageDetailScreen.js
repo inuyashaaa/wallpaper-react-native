@@ -24,9 +24,12 @@ const App = () => {
         '13ff6331fa5d44c2fff1bade0ab68eda4946dc5be59648e9730b219fd219ccb8',
     })
     unsplash.search
-      .photos('dogs', 1, 100, { orientation: 'portrait' })
+      .photos('cats', 1, 100, { orientation: 'portrait' })
       .then(toJson)
       .then((res) => {
+        console.log('================================================')
+        console.log('res', res)
+        console.log('================================================')
         setListImage(res.results)
       })
   }, [])

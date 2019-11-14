@@ -8,7 +8,7 @@ import screens from './index'
 
 const { width } = Dimensions.get('window')
 const tabViewConfig = {
-  index: 2,
+  index: 1,
   routes: [
     { key: 'first', icon: 'format-list-bulleted-square' },
     { key: 'second', icon: 'home' },
@@ -19,7 +19,7 @@ const MainScreen = (props) => {
   const [navigationState, setNavigationState] = useState(tabViewConfig)
 
   const renderIcon = ({ route, focused, color }) => (
-    <MaterialCommunityIcons name={route.icon} size={26} color={color} />
+    <MaterialCommunityIcons name={route.icon} size={28 / 375 * width} color={color} />
   )
 
   const renderCustomeTabBar = props => (
@@ -29,6 +29,22 @@ const MainScreen = (props) => {
       style={{ backgroundColor: '#00204a' }}
       renderIcon={renderIcon}
       renderLabel={() => null}
+      tabStyle={{ height: 50 / 375 * width }}
+      renderBadge={({ route }) => {
+        if (route.key === 'third') {
+          return
+        }
+        return (
+          <View style={{
+            width: 1 / 375 * width,
+            height: 30 / 375 * width,
+            backgroundColor: '#d9faff',
+            alignItems: 'center',
+            marginTop: 10 / 375 * width,
+          }}
+          />
+        )
+      }}
     />
   )
 
