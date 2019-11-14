@@ -14,6 +14,9 @@ const AppNavigator = createStackNavigator({
   ImageDetailScreen: {
     screen: screens.ImageDetailScreen,
   },
+  TrendingScreen: {
+    screen: screens.TrendingScreen,
+  },
 },
 {
   initialRouteName: 'MainScreen',

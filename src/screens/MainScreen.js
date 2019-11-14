@@ -55,7 +55,7 @@ const MainScreen = (props) => {
       renderScene={SceneMap({
         first: screens.HomeScreen,
         second: screens.HomeScreen,
-        third: screens.ImageDetailScreen,
+        third: screens.TrendingScreen,
       })}
       onIndexChange={index => setNavigationState({ ...navigationState, index })}
       initialLayout={{ width }}

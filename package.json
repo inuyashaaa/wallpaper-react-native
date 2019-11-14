@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@react-native-community/async-storage": "1.6.2",
+    "lottie-ios": "3.1.5",
+    "lottie-react-native": "3.3.1",
     "react": "16.9.0",
     "react-native": "0.61.4",
     "react-native-actionsheet": "2.4.2",
