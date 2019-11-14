@@ -4,6 +4,7 @@ import {
 } from 'react-native'
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import SplashScreen from 'react-native-splash-screen'
 import screens from './index'
 
 const { width } = Dimensions.get('window')
@@ -18,6 +19,9 @@ const tabViewConfig = {
 const MainScreen = (props) => {
   const [navigationState, setNavigationState] = useState(tabViewConfig)
 
+  useEffect(() => {
+    SplashScreen.hide()
+  }, [])
   const renderIcon = ({ route, focused, color }) => (
     <MaterialCommunityIcons name={route.icon} size={28 / 375 * width} color={color} />
   )
@@ -25,8 +29,8 @@ const MainScreen = (props) => {
   const renderCustomeTabBar = props => (
     <TabBar
       {...props}
-      indicatorStyle={{ backgroundColor: '#d9faff' }}
-      style={{ backgroundColor: '#00204a' }}
+      indicatorStyle={{ backgroundColor: '#fff' }}
+      style={{ backgroundColor: '#222831' }}
       renderIcon={renderIcon}
       renderLabel={() => null}
       tabStyle={{ height: 50 / 375 * width }}
@@ -38,7 +42,7 @@ const MainScreen = (props) => {
           <View style={{
             width: 1 / 375 * width,
             height: 30 / 375 * width,
-            backgroundColor: '#d9faff',
+            backgroundColor: '#fff',
             alignItems: 'center',
             marginTop: 10 / 375 * width,
           }}

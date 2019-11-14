@@ -6,9 +6,9 @@
 	objectVersion = 46;
 	objects = {
 /* Begin PBXBuildFile section */
-		006F1157D868269BB755B621 /* libPods-wallpaperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7733D36E0D0F8B6E16A35F8 /* libPods-wallpaperTests.a */; };
-		00E356F31AD99517003FC87E /* wallpaperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* wallpaperTests.m */; };
-		112E61DA33C661D827084CBB /* libPods-wallpaper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CB055C965C454FE0E9E6BC /* libPods-wallpaper.a */; };
+		006F1157D868269BB755B621 /* libPods-4KWallpapersTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7733D36E0D0F8B6E16A35F8 /* libPods-4KWallpapersTests.a */; };
+		00E356F31AD99517003FC87E /* 4KWallpapersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* 4KWallpapersTests.m */; };
+		112E61DA33C661D827084CBB /* libPods-4KWallpapers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CB055C965C454FE0E9E6BC /* libPods-4KWallpapers.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -16,9 +16,9 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* wallpaperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* wallpaperTests.m */; };
-		55A689411C7DF338CE5F9CF8 /* libPods-wallpaper-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 955DE6D6B0F7C2B88E1097A7 /* libPods-wallpaper-tvOSTests.a */; };
-		F286E1DEEBEA782B2128BF4F /* libPods-wallpaper-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB947DDEF63AD21EC7EC32 /* libPods-wallpaper-tvOS.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* 4KWallpapersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* 4KWallpapersTests.m */; };
+		55A689411C7DF338CE5F9CF8 /* libPods-4KWallpapers-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 955DE6D6B0F7C2B88E1097A7 /* libPods-4KWallpapers-tvOSTests.a */; };
+		F286E1DEEBEA782B2128BF4F /* libPods-4KWallpapers-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DB947DDEF63AD21EC7EC32 /* libPods-4KWallpapers-tvOS.a */; };
 		54983659D4064328A552B5F4 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A15D043D197E43349B60E87A /* AntDesign.ttf */; };
 		D149193DD6A942178EDEDFA8 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37D1DD9E827B44A0A1B73ED0 /* Entypo.ttf */; };
 		C7C3AAA793F04E57B8792876 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B6B83A961174562A4EBB7BA /* EvilIcons.ttf */; };
@@ -43,45 +43,45 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = wallpaper;
+			remoteInfo = 4KWallpapers;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "wallpaper-tvOS";
+			remoteInfo = "4KWallpapers-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* wallpaperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wallpaperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* 4KWallpapersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 4KWallpapersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* wallpaperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wallpaperTests.m; sourceTree = "<group>"; };
-		0681806E8DBC3E40B9B3BB38 /* Pods-wallpaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaper.release.xcconfig"; path = "Target Support Files/Pods-wallpaper/Pods-wallpaper.release.xcconfig"; sourceTree = "<group>"; };
-		08ED8650B55F7E3A887ABA8C /* Pods-wallpaperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaperTests.release.xcconfig"; path = "Target Support Files/Pods-wallpaperTests/Pods-wallpaperTests.release.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* wallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = wallpaper/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = wallpaper/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* 4KWallpapersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 4KWallpapersTests.m; sourceTree = "<group>"; };
+		0681806E8DBC3E40B9B3BB38 /* Pods-4KWallpapers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4KWallpapers.release.xcconfig"; path = "Target Support Files/Pods-4KWallpapers/Pods-4KWallpapers.release.xcconfig"; sourceTree = "<group>"; };
+		08ED8650B55F7E3A887ABA8C /* Pods-4KWallpapersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4KWallpapersTests.release.xcconfig"; path = "Target Support Files/Pods-4KWallpapersTests/Pods-4KWallpapersTests.release.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* 4KWallpapers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4KWallpapers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = 4KWallpapers/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = 4KWallpapers/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = wallpaper/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = wallpaper/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = wallpaper/main.m; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* wallpaper-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wallpaper-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* wallpaper-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wallpaper-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		62DB947DDEF63AD21EC7EC32 /* libPods-wallpaper-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wallpaper-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C3C93C34A9C0E895CF2B42A /* Pods-wallpaperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaperTests.debug.xcconfig"; path = "Target Support Files/Pods-wallpaperTests/Pods-wallpaperTests.debug.xcconfig"; sourceTree = "<group>"; };
-		955DE6D6B0F7C2B88E1097A7 /* libPods-wallpaper-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wallpaper-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		992DE99D602A0185D3350CA8 /* Pods-wallpaper-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaper-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-wallpaper-tvOSTests/Pods-wallpaper-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A2311101FC1B26FADEECFCBF /* Pods-wallpaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaper.debug.xcconfig"; path = "Target Support Files/Pods-wallpaper/Pods-wallpaper.debug.xcconfig"; sourceTree = "<group>"; };
-		A61C5E69225DD74BBECE74C5 /* Pods-wallpaper-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaper-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-wallpaper-tvOS/Pods-wallpaper-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		BC67AD2219FE06BAC04AC12C /* Pods-wallpaper-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaper-tvOS.release.xcconfig"; path = "Target Support Files/Pods-wallpaper-tvOS/Pods-wallpaper-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		C7733D36E0D0F8B6E16A35F8 /* libPods-wallpaperTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wallpaperTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = 4KWallpapers/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = 4KWallpapers/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = 4KWallpapers/main.m; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* 4KWallpapers-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "4KWallpapers-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* 4KWallpapers-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "4KWallpapers-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62DB947DDEF63AD21EC7EC32 /* libPods-4KWallpapers-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-4KWallpapers-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C3C93C34A9C0E895CF2B42A /* Pods-4KWallpapersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4KWallpapersTests.debug.xcconfig"; path = "Target Support Files/Pods-4KWallpapersTests/Pods-4KWallpapersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		955DE6D6B0F7C2B88E1097A7 /* libPods-4KWallpapers-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-4KWallpapers-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		992DE99D602A0185D3350CA8 /* Pods-4KWallpapers-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4KWallpapers-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-4KWallpapers-tvOSTests/Pods-4KWallpapers-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A2311101FC1B26FADEECFCBF /* Pods-4KWallpapers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4KWallpapers.debug.xcconfig"; path = "Target Support Files/Pods-4KWallpapers/Pods-4KWallpapers.debug.xcconfig"; sourceTree = "<group>"; };
+		A61C5E69225DD74BBECE74C5 /* Pods-4KWallpapers-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4KWallpapers-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-4KWallpapers-tvOS/Pods-4KWallpapers-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BC67AD2219FE06BAC04AC12C /* Pods-4KWallpapers-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4KWallpapers-tvOS.release.xcconfig"; path = "Target Support Files/Pods-4KWallpapers-tvOS/Pods-4KWallpapers-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		C7733D36E0D0F8B6E16A35F8 /* libPods-4KWallpapersTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-4KWallpapersTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F3CB055C965C454FE0E9E6BC /* libPods-wallpaper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wallpaper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F87064281DE57D54B47901F0 /* Pods-wallpaper-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallpaper-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-wallpaper-tvOSTests/Pods-wallpaper-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		F3CB055C965C454FE0E9E6BC /* libPods-4KWallpapers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-4KWallpapers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F87064281DE57D54B47901F0 /* Pods-4KWallpapers-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4KWallpapers-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-4KWallpapers-tvOSTests/Pods-4KWallpapers-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A15D043D197E43349B60E87A /* AntDesign.ttf */ = {isa = PBXFileReference; name = "AntDesign.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		37D1DD9E827B44A0A1B73ED0 /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1B6B83A961174562A4EBB7BA /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
@@ -105,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				006F1157D868269BB755B621 /* libPods-wallpaperTests.a in Frameworks */,
+				006F1157D868269BB755B621 /* libPods-4KWallpapersTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				112E61DA33C661D827084CBB /* libPods-wallpaper.a in Frameworks */,
+				112E61DA33C661D827084CBB /* libPods-4KWallpapers.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F286E1DEEBEA782B2128BF4F /* libPods-wallpaper-tvOS.a in Frameworks */,
+				F286E1DEEBEA782B2128BF4F /* libPods-4KWallpapers-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,20 +129,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55A689411C7DF338CE5F9CF8 /* libPods-wallpaper-tvOSTests.a in Frameworks */,
+				55A689411C7DF338CE5F9CF8 /* libPods-4KWallpapers-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* wallpaperTests */ = {
+		00E356EF1AD99517003FC87E /* 4KWallpapersTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* wallpaperTests.m */,
+				00E356F21AD99517003FC87E /* 4KWallpapersTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = wallpaperTests;
+			path = 4KWallpapersTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -153,7 +153,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* wallpaper */ = {
+		13B07FAE1A68108700A75B9A /* 4KWallpapers */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -164,7 +164,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = wallpaper;
+			name = 4KWallpapers;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -172,10 +172,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				F3CB055C965C454FE0E9E6BC /* libPods-wallpaper.a */,
-				62DB947DDEF63AD21EC7EC32 /* libPods-wallpaper-tvOS.a */,
-				955DE6D6B0F7C2B88E1097A7 /* libPods-wallpaper-tvOSTests.a */,
-				C7733D36E0D0F8B6E16A35F8 /* libPods-wallpaperTests.a */,
+				F3CB055C965C454FE0E9E6BC /* libPods-4KWallpapers.a */,
+				62DB947DDEF63AD21EC7EC32 /* libPods-4KWallpapers-tvOS.a */,
+				955DE6D6B0F7C2B88E1097A7 /* libPods-4KWallpapers-tvOSTests.a */,
+				C7733D36E0D0F8B6E16A35F8 /* libPods-4KWallpapersTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,9 +190,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* wallpaper */,
+				13B07FAE1A68108700A75B9A /* 4KWallpapers */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* wallpaperTests */,
+				00E356EF1AD99517003FC87E /* 4KWallpapersTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D339D62D454487F3E7E1F1D4 /* Pods */,
@@ -206,10 +206,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* wallpaper.app */,
-				00E356EE1AD99517003FC87E /* wallpaperTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* wallpaper-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* wallpaper-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* 4KWallpapers.app */,
+				00E356EE1AD99517003FC87E /* 4KWallpapersTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* 4KWallpapers-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* 4KWallpapers-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,14 +217,14 @@
 		D339D62D454487F3E7E1F1D4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A2311101FC1B26FADEECFCBF /* Pods-wallpaper.debug.xcconfig */,
-				0681806E8DBC3E40B9B3BB38 /* Pods-wallpaper.release.xcconfig */,
-				A61C5E69225DD74BBECE74C5 /* Pods-wallpaper-tvOS.debug.xcconfig */,
-				BC67AD2219FE06BAC04AC12C /* Pods-wallpaper-tvOS.release.xcconfig */,
-				992DE99D602A0185D3350CA8 /* Pods-wallpaper-tvOSTests.debug.xcconfig */,
-				F87064281DE57D54B47901F0 /* Pods-wallpaper-tvOSTests.release.xcconfig */,
-				7C3C93C34A9C0E895CF2B42A /* Pods-wallpaperTests.debug.xcconfig */,
-				08ED8650B55F7E3A887ABA8C /* Pods-wallpaperTests.release.xcconfig */,
+				A2311101FC1B26FADEECFCBF /* Pods-4KWallpapers.debug.xcconfig */,
+				0681806E8DBC3E40B9B3BB38 /* Pods-4KWallpapers.release.xcconfig */,
+				A61C5E69225DD74BBECE74C5 /* Pods-4KWallpapers-tvOS.debug.xcconfig */,
+				BC67AD2219FE06BAC04AC12C /* Pods-4KWallpapers-tvOS.release.xcconfig */,
+				992DE99D602A0185D3350CA8 /* Pods-4KWallpapers-tvOSTests.debug.xcconfig */,
+				F87064281DE57D54B47901F0 /* Pods-4KWallpapers-tvOSTests.release.xcconfig */,
+				7C3C93C34A9C0E895CF2B42A /* Pods-4KWallpapersTests.debug.xcconfig */,
+				08ED8650B55F7E3A887ABA8C /* Pods-4KWallpapersTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -257,9 +257,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* wallpaperTests */ = {
+		00E356ED1AD99517003FC87E /* 4KWallpapersTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "wallpaperTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "4KWallpapersTests" */;
 			buildPhases = (
 				504D5E78429A9B9F163BDA36 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -271,14 +271,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = wallpaperTests;
-			productName = wallpaperTests;
-			productReference = 00E356EE1AD99517003FC87E /* wallpaperTests.xctest */;
+			name = 4KWallpapersTests;
+			productName = 4KWallpapersTests;
+			productReference = 00E356EE1AD99517003FC87E /* 4KWallpapersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* wallpaper */ = {
+		13B07F861A680F5B00A75B9A /* 4KWallpapers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "wallpaper" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "4KWallpapers" */;
 			buildPhases = (
 				36A87552B450949A67E4553F /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -291,14 +291,14 @@
 			);
 			dependencies = (
 			);
-			name = wallpaper;
-			productName = wallpaper;
-			productReference = 13B07F961A680F5B00A75B9A /* wallpaper.app */;
+			name = 4KWallpapers;
+			productName = 4KWallpapers;
+			productReference = 13B07F961A680F5B00A75B9A /* 4KWallpapers.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* wallpaper-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* 4KWallpapers-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "wallpaper-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "4KWallpapers-tvOS" */;
 			buildPhases = (
 				BC91B7B36F3D8C866F55F331 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -311,14 +311,14 @@
 			);
 			dependencies = (
 			);
-			name = "wallpaper-tvOS";
-			productName = "wallpaper-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* wallpaper-tvOS.app */;
+			name = "4KWallpapers-tvOS";
+			productName = "4KWallpapers-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* 4KWallpapers-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* wallpaper-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* 4KWallpapers-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "wallpaper-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "4KWallpapers-tvOSTests" */;
 			buildPhases = (
 				E0C12ADD60098D8222671F93 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -330,9 +330,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "wallpaper-tvOSTests";
-			productName = "wallpaper-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* wallpaper-tvOSTests.xctest */;
+			name = "4KWallpapers-tvOSTests";
+			productName = "4KWallpapers-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* 4KWallpapers-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -359,7 +359,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "wallpaper" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "4KWallpapers" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -372,10 +372,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* wallpaper */,
-				00E356ED1AD99517003FC87E /* wallpaperTests */,
-				2D02E47A1E0B4A5D006451C7 /* wallpaper-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* wallpaper-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* 4KWallpapers */,
+				00E356ED1AD99517003FC87E /* 4KWallpapersTests */,
+				2D02E47A1E0B4A5D006451C7 /* 4KWallpapers-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* 4KWallpapers-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -474,7 +474,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-wallpaper-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-4KWallpapers-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -496,7 +496,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-wallpaperTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-4KWallpapersTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -518,7 +518,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-wallpaper-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-4KWallpapers-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -540,7 +540,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-wallpaper-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-4KWallpapers-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -592,7 +592,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* wallpaperTests.m in Sources */,
+				00E356F31AD99517003FC87E /* 4KWallpapersTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,7 +618,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* wallpaperTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* 4KWallpapersTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,12 +627,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* wallpaper */;
+			target = 13B07F861A680F5B00A75B9A /* 4KWallpapers */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* wallpaper-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* 4KWallpapers-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -644,7 +644,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = wallpaper;
+			path = 4KWallpapers;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -652,14 +652,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C3C93C34A9C0E895CF2B42A /* Pods-wallpaperTests.debug.xcconfig */;
+			baseConfigurationReference = 7C3C93C34A9C0E895CF2B42A /* Pods-4KWallpapersTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = wallpaperTests/Info.plist;
+				INFOPLIST_FILE = 4KWallpapersTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -669,17 +669,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wallpaper.app/wallpaper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/4KWallpapers.app/4KWallpapers";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08ED8650B55F7E3A887ABA8C /* Pods-wallpaperTests.release.xcconfig */;
+			baseConfigurationReference = 08ED8650B55F7E3A887ABA8C /* Pods-4KWallpapersTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = wallpaperTests/Info.plist;
+				INFOPLIST_FILE = 4KWallpapersTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -689,18 +689,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wallpaper.app/wallpaper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/4KWallpapers.app/4KWallpapers";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2311101FC1B26FADEECFCBF /* Pods-wallpaper.debug.xcconfig */;
+			baseConfigurationReference = A2311101FC1B26FADEECFCBF /* Pods-4KWallpapers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				INFOPLIST_FILE = wallpaper/Info.plist;
+				INFOPLIST_FILE = 4KWallpapers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -708,18 +708,18 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = wallpaper;
+				PRODUCT_NAME = 4KWallpapers;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0681806E8DBC3E40B9B3BB38 /* Pods-wallpaper.release.xcconfig */;
+			baseConfigurationReference = 0681806E8DBC3E40B9B3BB38 /* Pods-4KWallpapers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = wallpaper/Info.plist;
+				INFOPLIST_FILE = 4KWallpapers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -727,14 +727,14 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = wallpaper;
+				PRODUCT_NAME = 4KWallpapers;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A61C5E69225DD74BBECE74C5 /* Pods-wallpaper-tvOS.debug.xcconfig */;
+			baseConfigurationReference = A61C5E69225DD74BBECE74C5 /* Pods-4KWallpapers-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -745,14 +745,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "wallpaper-tvOS/Info.plist";
+				INFOPLIST_FILE = "4KWallpapers-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.wallpaper-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.4KWallpapers-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -762,7 +762,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC67AD2219FE06BAC04AC12C /* Pods-wallpaper-tvOS.release.xcconfig */;
+			baseConfigurationReference = BC67AD2219FE06BAC04AC12C /* Pods-4KWallpapers-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -773,14 +773,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "wallpaper-tvOS/Info.plist";
+				INFOPLIST_FILE = "4KWallpapers-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.wallpaper-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.4KWallpapers-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -790,7 +790,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 992DE99D602A0185D3350CA8 /* Pods-wallpaper-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 992DE99D602A0185D3350CA8 /* Pods-4KWallpapers-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -800,24 +800,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "wallpaper-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "4KWallpapers-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.wallpaper-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.4KWallpapers-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wallpaper-tvOS.app/wallpaper-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/4KWallpapers-tvOS.app/4KWallpapers-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F87064281DE57D54B47901F0 /* Pods-wallpaper-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = F87064281DE57D54B47901F0 /* Pods-4KWallpapers-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -827,17 +827,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "wallpaper-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "4KWallpapers-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.wallpaper-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.4KWallpapers-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wallpaper-tvOS.app/wallpaper-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/4KWallpapers-tvOS.app/4KWallpapers-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -944,7 +944,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "wallpaperTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "4KWallpapersTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -953,7 +953,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "wallpaper" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "4KWallpapers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -962,7 +962,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "wallpaper-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "4KWallpapers-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -971,7 +971,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "wallpaper-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "4KWallpapers-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -980,7 +980,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "wallpaper" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "4KWallpapers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

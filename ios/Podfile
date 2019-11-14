@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'wallpaper' do
-  # Pods for wallpaper
+target '4KWallpapers' do
+  # Pods for 4KWallpapers
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -36,7 +36,9 @@ target 'wallpaper' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
-  target 'wallpaperTests' do
+  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
+
+  target '4KWallpapersTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -44,10 +46,10 @@ target 'wallpaper' do
   use_native_modules!
 end
 
-target 'wallpaper-tvOS' do
-  # Pods for wallpaper-tvOS
+target '4KWallpapers-tvOS' do
+  # Pods for 4KWallpapers-tvOS
 
-  target 'wallpaper-tvOSTests' do
+  target '4KWallpapers-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
