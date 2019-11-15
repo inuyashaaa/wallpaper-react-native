@@ -57,7 +57,7 @@ const MainScreen = (props) => {
       renderTabBar={renderCustomeTabBar}
       navigationState={navigationState}
       renderScene={SceneMap({
-        first: screens.HomeScreen,
+        first: screens.CategoryScreen,
         second: screens.HomeScreen,
         third: screens.TrendingScreen,
       })}

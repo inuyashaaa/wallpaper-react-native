@@ -36,5 +36,6 @@ module.exports = {
     semi: ["error", "never"],
     "no-nested-ternary": "off",
     "no-use-before-define": "off",
+    "import/no-cycle": 'off'
   }
 }

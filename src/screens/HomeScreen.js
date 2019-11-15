@@ -67,10 +67,8 @@ const App = () => {
       />
       <ActionSheet
         ref={actionsheetRef}
-        title="Which one do you like ?"
-        options={['Apple', 'Banana', 'cancel']}
-        cancelButtonIndex={2}
-        destructiveButtonIndex={1}
+        options={['Set as Lock screen', 'Set as Home screen', 'Set both', 'cancel']}
+        cancelButtonIndex={3}
         onPress={(index) => { /* do something */ }}
       />
     </View>

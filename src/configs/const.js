@@ -3,6 +3,7 @@ const screens = {
   MainScreen: 'MainScreen',
   ImageDetailScreen: 'ImageDetailScreen',
   TrendingScreen: 'TrendingScreen',
+  CategoryScreen: 'CategoryScreen',
 }
 
 export {
