@@ -5,17 +5,11 @@ import { Easing, Animated } from 'react-native'
 import screens from './src/screens'
 
 const AppNavigator = createStackNavigator({
-  HomeScreen: {
-    screen: screens.HomeScreen,
-  },
   MainScreen: {
     screen: screens.MainScreen,
   },
   ImageDetailScreen: {
     screen: screens.ImageDetailScreen,
-  },
-  TrendingScreen: {
-    screen: screens.TrendingScreen,
   },
 },
 {

@@ -1,83 +1,178 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useState } from 'react'
 import {
   StyleSheet,
   View,
-  FlatList,
   TouchableOpacity,
   Dimensions,
+  StatusBar,
 } from 'react-native'
-import Unsplash, { toJson } from 'unsplash-js'
 import FastImage from 'react-native-fast-image'
 import RNWalle from 'react-native-walle'
-import ActionSheet from 'react-native-actionsheet'
-import AppConfig from '../utils/AppConfig'
+import { useNavigationParam } from 'react-navigation-hooks'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import Modal from 'react-native-modal'
 import AppPreferences from '../utils/AppPreferences'
+import { Colors } from '../configs/const'
+import { Text } from '../components'
 
-const { width } = Dimensions.get('window')
+const { width, height } = Dimensions.get('window')
 
-const App = () => {
-  const [listImage, setListImage] = useState([])
-  const actionsheetRef = useRef(null)
+const ImageDetailScreen = (props) => {
+  const image = useNavigationParam('image')
+  const [isShowModalSetWallpaper, setIsShowModalSetWallpaper] = useState(false)
 
-  useEffect(() => {
-    const unsplash = new Unsplash({
-      accessKey: AppConfig.API_ACCESS_KEY,
-    })
-    unsplash.search
-      .photos('cats', 1, 100, { orientation: 'portrait' })
-      .then(toJson)
-      .then((res) => {
-        console.log('res', res)
-        setListImage(res.results)
-      })
-  }, [])
+  const handleSetWallpaper = (localtion = 'system') => {
+    setIsShowModalSetWallpaper(false)
 
-  const handleSetWallpaper = (image) => {
-    console.tron.log({ image })
-    RNWalle.setWallPaper(image?.urls?.regular, 'system', (res) => {
+    RNWalle.setWallPaper(image?.urls?.regular, localtion, (res) => {
       if (res === 'success') {
         AppPreferences.showToastMessage('Home screen wallpaper applied')
       }
     })
   }
-  const handleShowActionsheet = (image) => {
-    actionsheetRef.current.show()
+
+  const handleGoBack = () => {
+    props?.navigation?.goBack()
+  }
+
+  const handleShowActionsheet = () => {
+    setIsShowModalSetWallpaper(true)
   }
 
   return (
-    <View style={{ flex: 1 }}>
-      <FlatList
-        showsVerticalScrollIndicator={false}
-        data={listImage}
-        numColumns={3}
-        keyExtractor={(item, index) => `Image-${index}`}
-        extraData={listImage}
-        renderItem={({ item, index }) => (
+    <View style={styles.container}>
+      <StatusBar hidden />
+      <FastImage
+        source={{ uri: image?.urls?.regular }}
+        resizeMode={FastImage.resizeMode.cover}
+        style={{ width, height }}
+      />
+      <View style={styles.bottomBar}>
+
+        <TouchableOpacity
+          style={styles.buttonBack}
+          activeOpacity={0.8}
+          onPress={handleGoBack}
+        >
+          <MaterialIcons
+            name="keyboard-backspace"
+            size={26 / 375 * width}
+            color={Colors.dark}
+          />
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.buttonMain}
+          activeOpacity={0.8}
+          onPress={handleShowActionsheet}
+        >
+          <MaterialIcons
+            name="add"
+            size={44 / 375 * width}
+            color={Colors.dark}
+          />
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.buttonBack}
+          activeOpacity={0.8}
+        >
+          <MaterialIcons
+            name="send"
+            size={26 / 375 * width}
+            color={Colors.dark}
+          />
+        </TouchableOpacity>
+      </View>
+      <Modal
+        isVisible={isShowModalSetWallpaper}
+        onBackdropPress={() => setIsShowModalSetWallpaper(false)}
+        useNativeDriver
+        style={styles.modalContainer}
+        animationInTiming={400}
+        backdropTransitionInTiming={400}
+        animationOutTiming={750}
+        backdropTransitionOutTiming={750}
+      >
+        <View style={styles.modalSetWallpaper}>
           <TouchableOpacity
-            onPress={() => handleShowActionsheet(item)}
-            style={{ flex: 1 }}
-            activeOpacity={0.5}
+            style={styles.buttonModalContainer}
+            onPress={() => handleSetWallpaper('system')}
           >
-            <FastImage
-              source={{ uri: item.urls.small }}
-              resizeMode={FastImage.resizeMode.stretch}
-              style={{ width: width / 3, height: (width / 3) * 1.5 }}
-            />
+            <Text style={styles.textModal}>Set as Home screen</Text>
           </TouchableOpacity>
-        )}
-      />
-      <ActionSheet
-        ref={actionsheetRef}
-        title="Which one do you like ?"
-        options={['Apple', 'Banana', 'cancel']}
-        cancelButtonIndex={2}
-        destructiveButtonIndex={1}
-        onPress={(index) => { /* do something */ }}
-      />
+          <TouchableOpacity
+            style={[styles.buttonModalContainer, styles.divider]}
+            onPress={() => handleSetWallpaper('lock')}
+          >
+            <Text style={styles.textModal}>Set as Lock screen</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.buttonModalContainer}
+            onPress={() => handleSetWallpaper('both')}
+          >
+            <Text style={styles.textModal}>Set both</Text>
+          </TouchableOpacity>
+        </View>
+      </Modal>
     </View>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  bottomBar: {
+    flexDirection: 'row',
+    position: 'absolute',
+    bottom: 20 / 375 * width,
+    width,
+    paddingHorizontal: 30 / 375 * width,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  buttonBack: {
+    width: 50 / 375 * width,
+    height: 50 / 375 * width,
+    backgroundColor: 'rgba(34, 40, 49, 0.7)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 25 / 375 * width,
+  },
+  buttonMain: {
+    width: 70 / 375 * width,
+    height: 70 / 375 * width,
+    backgroundColor: 'rgba(34, 40, 49, 0.7)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 35 / 375 * width,
+  },
+  modalSetWallpaper: {
+    width: 340 / 375 * width,
+    height: 132 / 375 * width,
+    borderRadius: 10,
+    backgroundColor: '#fff',
+  },
+  modalContainer: {
+    justifyContent: 'flex-end',
+    margin: 18 / 375 * width,
+  },
+  textModal: {
+    color: Colors.black,
+  },
+  buttonModalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 10 / 375 * width,
+  },
+  divider: {
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderTopColor: Colors.turquoise,
+    borderBottomColor: Colors.turquoise,
+  },
+})
 
-export default App
+export default ImageDetailScreen

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   StyleSheet,
   View,
@@ -8,20 +8,20 @@ import {
 } from 'react-native'
 import Unsplash, { toJson } from 'unsplash-js'
 import FastImage from 'react-native-fast-image'
-import RNWalle from 'react-native-walle'
-import ActionSheet from 'react-native-actionsheet'
+import { useNavigation } from 'react-navigation-hooks'
 import AppConfig from '../utils/AppConfig'
-import AppPreferences from '../utils/AppPreferences'
+import { screenNames } from '../configs/const'
 
 const { width } = Dimensions.get('window')
 
-const App = () => {
+const App = (props) => {
+  const { navigate } = useNavigation()
   const [listImage, setListImage] = useState([])
-  const actionsheetRef = useRef(null)
 
   useEffect(() => {
     const unsplash = new Unsplash({
       accessKey: AppConfig.API_ACCESS_KEY,
+      secret: AppConfig.API_SECRET_KEY,
     })
     unsplash.search
       .photos('dogs', 1, 100, { orientation: 'portrait' })
@@ -31,16 +31,8 @@ const App = () => {
       })
   }, [])
 
-  const handleSetWallpaper = (image) => {
-    console.tron.log({ image })
-    RNWalle.setWallPaper(image?.urls?.regular, 'system', (res) => {
-      if (res === 'success') {
-        AppPreferences.showToastMessage('Home screen wallpaper applied')
-      }
-    })
-  }
-  const handleShowActionsheet = (image) => {
-    actionsheetRef.current.show()
+  const handleGoImageDetailScreen = (image) => {
+    navigate({ routeName: screenNames.ImageDetailScreen, params: { image } })
   }
 
   return (
@@ -53,7 +45,7 @@ const App = () => {
         extraData={listImage}
         renderItem={({ item, index }) => (
           <TouchableOpacity
-            onPress={() => handleShowActionsheet(item)}
+            onPress={() => handleGoImageDetailScreen(item)}
             style={{ flex: 1 }}
             activeOpacity={0.9}
           >
@@ -64,12 +56,6 @@ const App = () => {
             />
           </TouchableOpacity>
         )}
-      />
-      <ActionSheet
-        ref={actionsheetRef}
-        options={['Set as Lock screen', 'Set as Home screen', 'Set both', 'cancel']}
-        cancelButtonIndex={3}
-        onPress={(index) => { /* do something */ }}
       />
     </View>
   )

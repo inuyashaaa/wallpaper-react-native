@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {
-  View, StyleSheet, Dimensions,
+  View, StyleSheet, Dimensions, StatusBar,
 } from 'react-native'
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
@@ -22,6 +22,7 @@ const MainScreen = (props) => {
   useEffect(() => {
     SplashScreen.hide()
   }, [])
+
   const renderIcon = ({ route, focused, color }) => (
     <MaterialCommunityIcons name={route.icon} size={28 / 375 * width} color={color} />
   )
@@ -53,18 +54,21 @@ const MainScreen = (props) => {
   )
 
   return (
-    <TabView
-      renderTabBar={renderCustomeTabBar}
-      navigationState={navigationState}
-      renderScene={SceneMap({
-        first: screens.CategoryScreen,
-        second: screens.HomeScreen,
-        third: screens.TrendingScreen,
-      })}
-      onIndexChange={index => setNavigationState({ ...navigationState, index })}
-      initialLayout={{ width }}
-      swipeEnabled
-    />
+    <View style={{ flex: 1 }}>
+      <StatusBar hidden />
+      <TabView
+        renderTabBar={renderCustomeTabBar}
+        navigationState={navigationState}
+        renderScene={SceneMap({
+          first: screens.CategoryScreen,
+          second: screens.HomeScreen,
+          third: screens.TrendingScreen,
+        })}
+        onIndexChange={index => setNavigationState({ ...navigationState, index })}
+        initialLayout={{ width }}
+        swipeEnabled
+      />
+    </View>
   )
 }
 export default MainScreen
