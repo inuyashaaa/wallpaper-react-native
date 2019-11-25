@@ -11,6 +11,7 @@ import RNWalle from 'react-native-walle'
 import { useNavigationParam } from 'react-navigation-hooks'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Modal from 'react-native-modal'
+import Share from 'react-native-share'
 import AppPreferences from '../utils/AppPreferences'
 import { Colors } from '../configs/const'
 import { Text } from '../components'
@@ -24,7 +25,7 @@ const ImageDetailScreen = (props) => {
   const handleSetWallpaper = (localtion = 'system') => {
     setIsShowModalSetWallpaper(false)
 
-    RNWalle.setWallPaper(image?.urls?.regular, localtion, (res) => {
+    RNWalle.setWallPaper(image?.src?.portrait, localtion, (res) => {
       if (res === 'success') {
         AppPreferences.showToastMessage('Home screen wallpaper applied')
       }
@@ -39,11 +40,25 @@ const ImageDetailScreen = (props) => {
     setIsShowModalSetWallpaper(true)
   }
 
+  const shareSingleImage = async (url) => {
+    const shareOptions = {
+      title: 'Share file',
+      url,
+      failOnCancel: false,
+    }
+
+    try {
+      await Share.open(shareOptions)
+    } catch (error) {
+      console.log('Error =>', error)
+    }
+  }
+
   return (
     <View style={styles.container}>
       <StatusBar hidden />
       <FastImage
-        source={{ uri: image?.urls?.regular }}
+        source={{ uri: image?.src?.portrait }}
         resizeMode={FastImage.resizeMode.cover}
         style={{ width, height }}
       />
@@ -76,6 +91,7 @@ const ImageDetailScreen = (props) => {
         <TouchableOpacity
           style={styles.buttonBack}
           activeOpacity={0.8}
+          onPress={() => shareSingleImage(image?.src?.portrait)}
         >
           <MaterialIcons
             name="send"
@@ -84,6 +100,7 @@ const ImageDetailScreen = (props) => {
           />
         </TouchableOpacity>
       </View>
+
       <Modal
         isVisible={isShowModalSetWallpaper}
         onBackdropPress={() => setIsShowModalSetWallpaper(false)}

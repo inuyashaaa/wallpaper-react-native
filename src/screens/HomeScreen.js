@@ -6,11 +6,11 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native'
-import Unsplash, { toJson } from 'unsplash-js'
 import FastImage from 'react-native-fast-image'
 import { useNavigation } from 'react-navigation-hooks'
 import AppConfig from '../utils/AppConfig'
 import { screenNames } from '../configs/const'
+import axios from '../configs/axios'
 
 const { width } = Dimensions.get('window')
 
@@ -19,17 +19,21 @@ const App = (props) => {
   const [listImage, setListImage] = useState([])
 
   useEffect(() => {
-    const unsplash = new Unsplash({
-      accessKey: AppConfig.API_ACCESS_KEY,
-      secret: AppConfig.API_SECRET_KEY,
-    })
-    unsplash.search
-      .photos('dogs', 1, 100, { orientation: 'portrait' })
-      .then(toJson)
-      .then((res) => {
-        setListImage(res.results)
-      })
+    const asyncLoadData = async () => {
+      await getImages()
+    }
+    asyncLoadData()
   }, [])
+
+  const getImages = async () => {
+    try {
+      const response = await axios.get('/popular?per_page=80&page=1')
+      console.tron.log({ response })
+      setListImage(response.data.photos)
+    } catch (error) {
+      console.log('getImages.error', error)
+    }
+  }
 
   const handleGoImageDetailScreen = (image) => {
     navigate({ routeName: screenNames.ImageDetailScreen, params: { image } })
@@ -50,7 +54,7 @@ const App = (props) => {
             activeOpacity={0.9}
           >
             <FastImage
-              source={{ uri: item.urls.small }}
+              source={{ uri: item?.src?.portrait }}
               resizeMode={FastImage.resizeMode.stretch}
               style={{ width: width / 3, height: (width / 3) * 1.5 }}
             />
