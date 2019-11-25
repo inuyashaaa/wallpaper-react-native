@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   StyleSheet,
   View,
@@ -12,15 +12,37 @@ import { useNavigationParam } from 'react-navigation-hooks'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Modal from 'react-native-modal'
 import Share from 'react-native-share'
+import { InterstitialAd, TestIds, AdEventType } from '@react-native-firebase/admob'
 import AppPreferences from '../utils/AppPreferences'
 import { Colors } from '../configs/const'
 import { Text } from '../components'
+import AppConfig from '../utils/AppConfig'
+
 
 const { width, height } = Dimensions.get('window')
 
 const ImageDetailScreen = (props) => {
   const image = useNavigationParam('image')
   const [isShowModalSetWallpaper, setIsShowModalSetWallpaper] = useState(false)
+
+
+  useEffect(() => {
+    const interstitial = InterstitialAd.createForAdRequest(AppConfig.ADMOD_APP_ID_FULL, {
+      // requestNonPersonalizedAdsOnly: true,
+    })
+
+    const unsubscribe = interstitial.onAdEvent((type) => {
+      if (type === AdEventType.LOADED) {
+        interstitial.show()
+      }
+    })
+
+    interstitial.load()
+
+    return () => {
+      unsubscribe()
+    }
+  }, [])
 
   const handleSetWallpaper = (localtion = 'system') => {
     setIsShowModalSetWallpaper(false)

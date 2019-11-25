@@ -8,6 +8,7 @@ import {
 } from 'react-native'
 import FastImage from 'react-native-fast-image'
 import { useNavigation } from 'react-navigation-hooks'
+import { BannerAd, BannerAdSize, TestIds } from '@react-native-firebase/admob'
 import AppConfig from '../utils/AppConfig'
 import { screenNames } from '../configs/const'
 import axios from '../configs/axios'
@@ -60,6 +61,19 @@ const App = (props) => {
             />
           </TouchableOpacity>
         )}
+      />
+      <BannerAd
+        unitId={AppConfig.ADMOD_APP_ID}
+        size={BannerAdSize.SMART_BANNER}
+        requestOptions={{
+          requestNonPersonalizedAdsOnly: true,
+        }}
+        onAdLoaded={() => {
+          console.log('Advert loaded')
+        }}
+        onAdFailedToLoad={(error) => {
+          console.log('Advert failed to load: ', error)
+        }}
       />
     </View>
   )

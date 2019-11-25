@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "257962106196",
+    "firebase_url": "https://wallpapers-12cb5.firebaseio.com",
+    "project_id": "wallpapers-12cb5",
+    "storage_bucket": "wallpapers-12cb5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257962106196:android:d2d2b4bc946bb56c2dfcc1",
+        "android_client_info": {
+          "package_name": "dev.huymanh.wallpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257962106196-6lgi1e92vufbkic9es1h72e7nmj8d3fb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAudFaQNFt_u-x4KtWC3Yj4Mjw9_P3S_vo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257962106196-6lgi1e92vufbkic9es1h72e7nmj8d3fb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
