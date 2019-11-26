@@ -36,7 +36,6 @@ const TrendingScreen = () => {
   const getImages = async () => {
     setIsLoadingMore(true)
     try {
-      console.tron.log({ listImage })
       const response = await axios.get(`/curated?per_page=80&page=${nextPage}`, {
         headers: {
           Authorization: apiKeys[Math.floor(Math.random() * Math.floor(apiKeys.length))],
