@@ -2,9 +2,14 @@ import React from 'react'
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 import { Easing, Animated } from 'react-native'
+import { Provider } from 'react-redux'
 import screens from './src/screens'
+import store from './src/redux/store'
 
 const AppNavigator = createStackNavigator({
+  SplashScreen: {
+    screen: screens.SplashScreen,
+  },
   MainScreen: {
     screen: screens.MainScreen,
   },
@@ -13,7 +18,7 @@ const AppNavigator = createStackNavigator({
   },
 },
 {
-  initialRouteName: 'MainScreen',
+  initialRouteName: 'SplashScreen',
   headerMode: 'none',
   cardStyle: {
     opacity: 1,
@@ -48,6 +53,10 @@ const AppContainer = createAppContainer(AppNavigator)
 
 export default class App extends React.Component {
   render() {
-    return <AppContainer />
+    return (
+      <Provider store={store}>
+        <AppContainer />
+      </Provider>
+    )
   }
 }

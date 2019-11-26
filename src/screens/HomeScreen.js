@@ -15,7 +15,7 @@ import axios from '../configs/axios'
 
 const { width } = Dimensions.get('window')
 
-const App = (props) => {
+const App = () => {
   const { navigate } = useNavigation()
   const [listImage, setListImage] = useState([])
 

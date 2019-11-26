@@ -46,6 +46,8 @@ const AppPreferences = {
       ToastAndroid.BOTTOM,
     )
   },
+  // eslint-disable-next-line no-undef
+  dev: () => __DEV__,
 }
 
 export default AppPreferences

@@ -3,6 +3,7 @@ import MainScreen from './MainScreen'
 import ImageDetailScreen from './ImageDetailScreen'
 import TrendingScreen from './TrendingScreen'
 import CategoryScreen from './CategoryScreen'
+import SplashScreen from './SplashScreen'
 
 export default {
   HomeScreen,
@@ -10,4 +11,5 @@ export default {
   ImageDetailScreen,
   TrendingScreen,
   CategoryScreen,
+  SplashScreen,
 }
