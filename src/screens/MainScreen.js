@@ -5,7 +5,9 @@ import {
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import SplashScreen from 'react-native-splash-screen'
+import { BannerAd, BannerAdSize } from '@react-native-firebase/admob'
 import screens from './index'
+import AppConfig from '../utils/AppConfig'
 
 const { width } = Dimensions.get('window')
 const tabViewConfig = {
@@ -18,7 +20,7 @@ const tabViewConfig = {
 }
 const MainScreen = (props) => {
   const [navigationState, setNavigationState] = useState(tabViewConfig)
-
+  const [isShowAdmod, setIsShowAdmod] = useState(true)
   useEffect(() => {
     SplashScreen.hide()
   }, [])
@@ -68,6 +70,23 @@ const MainScreen = (props) => {
         initialLayout={{ width }}
         swipeEnabled
       />
+      {isShowAdmod && (
+        <BannerAd
+          unitId={AppConfig.ADMOD_APP_ID}
+          size={BannerAdSize.SMART_BANNER}
+          requestOptions={{
+          }}
+          onAdLoaded={() => {
+            console.log('Advert loaded')
+          }}
+          onAdFailedToLoad={((error) => {
+            console.log('Advert failed to load: ', error)
+          })}
+          onAdClosed={(() => {
+            setIsShowAdmod(false)
+          })}
+        />
+      )}
     </View>
   )
 }

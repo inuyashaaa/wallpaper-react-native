@@ -1,18 +1,41 @@
-export const GET_MASTER_DATA = 'GET_MASTER_DATA'
-export const GET_MASTER_DATA_SUCCESS = 'GET_MASTER_DATA_SUCCESS'
+export const SET_API_KEYS = 'SET_API_KEYS'
+export const SET_SETTINGS = 'SET_SETTINGS'
+export const SET_COLLECTIONS = 'SET_COLLECTIONS'
 
-export const getApiKeys = (data, callback) => ({
-  type: GET_MASTER_DATA,
-  payload: { data, callback },
+export const setCollections = data => ({
+  type: SET_COLLECTIONS,
+  payload: { data },
 })
 
-const initialState = {}
+export const setApiKeys = data => ({
+  type: SET_API_KEYS,
+  payload: { data },
+})
+
+export const setSettings = data => ({
+  type: SET_SETTINGS,
+  payload: { data },
+})
+
+const initialState = {
+  settings: {},
+  apiKeys: [],
+  collections: [],
+}
 
 export default (state = initialState, action) => {
   switch (action.type) {
-  case GET_MASTER_DATA_SUCCESS:
+  case SET_COLLECTIONS:
     return {
-      ...action.payload,
+      ...state, collections: action?.payload?.data,
+    }
+  case SET_API_KEYS:
+    return {
+      ...state, apiKeys: action?.payload?.data,
+    }
+  case SET_SETTINGS:
+    return {
+      ...state, settings: action?.payload?.data,
     }
   default:
     return state

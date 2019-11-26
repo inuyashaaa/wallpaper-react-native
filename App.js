@@ -16,6 +16,9 @@ const AppNavigator = createStackNavigator({
   ImageDetailScreen: {
     screen: screens.ImageDetailScreen,
   },
+  CollectionScreen: {
+    screen: screens.CollectionScreen,
+  },
 },
 {
   initialRouteName: 'SplashScreen',

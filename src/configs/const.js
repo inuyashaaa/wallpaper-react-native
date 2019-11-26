@@ -5,6 +5,7 @@ const screenNames = {
   TrendingScreen: 'TrendingScreen',
   CategoryScreen: 'CategoryScreen',
   SplashScreen: 'SplashScreen',
+  CollectionScreen: 'CollectionScreen',
 }
 const Colors = {
   black: '#222831',

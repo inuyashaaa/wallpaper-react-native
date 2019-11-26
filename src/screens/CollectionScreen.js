@@ -16,7 +16,8 @@ import { Text } from '../components'
 
 const { width } = Dimensions.get('window')
 
-const TrendingScreen = () => {
+const CollectionScreen = (props) => {
+  const { search } = props?.navigation?.state?.params
   const master = useSelector(state => state.master)
   const { apiKeys = [] } = master
   const { navigate } = useNavigation()
@@ -37,7 +38,7 @@ const TrendingScreen = () => {
     setIsLoadingMore(true)
     try {
       console.tron.log({ listImage })
-      const response = await axios.get(`/curated?per_page=80&page=${nextPage}`, {
+      const response = await axios.get(`/search?query=${search}&per_page=80&page=${nextPage}`, {
         headers: {
           Authorization: apiKeys[Math.floor(Math.random() * Math.floor(apiKeys.length))],
         },
@@ -54,7 +55,7 @@ const TrendingScreen = () => {
   const handleRefreshData = async () => {
     setIsRefreshing(true)
     try {
-      const response = await axios.get('/curated?per_page=80&page=1', {
+      const response = await axios.get(`/search?query=${search}&per_page=80&page=1`, {
         headers: {
           Authorization: apiKeys[Math.floor(Math.random() * Math.floor(apiKeys.length))],
         },
@@ -109,18 +110,26 @@ const TrendingScreen = () => {
         onEndReached={getImages}
         ListFooterComponent={renderFooter}
       />
+
       <View style={{
         position: 'absolute',
         top: 0,
         left: 0,
         right: 0,
-        height: 30 / 375 * width,
+        height: 50 / 375 * width,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'rgba(34, 40, 49, 0.4)',
       }}
       >
-        <Text style={{ fontSize: 16 }}>Newest</Text>
+        <Text style={{
+          fontSize: 24,
+          textTransform: 'uppercase',
+        }}
+        >
+          {search}
+
+        </Text>
       </View>
     </View>
   )
@@ -128,4 +137,4 @@ const TrendingScreen = () => {
 
 const styles = StyleSheet.create({})
 
-export default TrendingScreen
+export default CollectionScreen
