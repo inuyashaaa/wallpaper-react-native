@@ -3,14 +3,25 @@ import { View } from 'react-native'
 import { useNavigation } from 'react-navigation-hooks'
 import firestore from '@react-native-firebase/firestore'
 import { useDispatch } from 'react-redux'
+import admob, { MaxAdContentRating } from '@react-native-firebase/admob'
 import { screenNames } from '../configs/const'
 import { setApiKeys, setSettings, setCollections } from '../redux/master'
+
 
 const SplashScreen = () => {
   const dispatch = useDispatch()
   const { navigate } = useNavigation()
 
   useEffect(() => {
+    const initAdmod = async () => {
+      await admob().setRequestConfiguration({
+        setRequestConfiguration: MaxAdContentRating.PG,
+        tagForChildDirectedTreatment: true,
+        tagForUnderAgeOfConsent: true,
+      })
+    }
+    initAdmod()
+
     let unsubscribe1
     let unsubscribe2
     const unsubscribe = firestore()

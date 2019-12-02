@@ -5,7 +5,9 @@ import {
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import SplashScreen from 'react-native-splash-screen'
-import { BannerAd, BannerAdSize } from '@react-native-firebase/admob'
+import {
+  BannerAd, BannerAdSize,
+} from '@react-native-firebase/admob'
 import screens from './index'
 import AppConfig from '../utils/AppConfig'
 
@@ -18,9 +20,10 @@ const tabViewConfig = {
     { key: 'third', icon: 'trending-up' },
   ],
 }
-const MainScreen = (props) => {
+const MainScreen = () => {
   const [navigationState, setNavigationState] = useState(tabViewConfig)
   const [isShowAdmod, setIsShowAdmod] = useState(true)
+
   useEffect(() => {
     SplashScreen.hide()
   }, [])
@@ -79,6 +82,7 @@ const MainScreen = (props) => {
           onAdLoaded={() => {
             console.log('Advert loaded')
           }}
+          d
           onAdFailedToLoad={((error) => {
             console.log('Advert failed to load: ', error)
           })}
@@ -91,9 +95,3 @@ const MainScreen = (props) => {
   )
 }
 export default MainScreen
-
-const styles = StyleSheet.create({
-  scene: {
-    flex: 1,
-  },
-})

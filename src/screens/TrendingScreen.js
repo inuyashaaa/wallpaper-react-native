@@ -51,7 +51,6 @@ const TrendingScreen = () => {
   }
 
   const handleRefreshData = async () => {
-    setIsRefreshing(true)
     try {
       const response = await axios.get('/curated?per_page=80&page=1', {
         headers: {
