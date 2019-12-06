@@ -55,6 +55,7 @@ const CategoryScreen = () => {
         keyExtractor={(item, index) => `FlatList-${index}`}
         showsVerticalScrollIndicator={false}
         renderItem={renderItem}
+
       />
     </View>
   )

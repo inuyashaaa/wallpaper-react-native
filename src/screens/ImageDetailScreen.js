@@ -36,6 +36,8 @@ const ImageDetailScreen = (props) => {
       })
 
       const unsubscribe = interstitial.onAdEvent((type) => {
+        console.log('AdEventType.type: ', type)
+
         if (type === AdEventType.LOADED) {
           interstitial.show()
         }
