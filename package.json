@@ -19,7 +19,7 @@
     "react": "16.9.0",
     "react-native": "0.61.4",
     "react-native-device-info": "5.3.0",
-    "react-native-fast-image": "7.0.2",
+    "react-native-fast-image": "8.3.0",
     "react-native-gesture-handler": "1.5.0",
     "react-native-modal": "11.5.3",
     "react-native-rate": "^1.2.6",
