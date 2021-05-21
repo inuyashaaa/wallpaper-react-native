@@ -1,65 +1,67 @@
-import React, { useState, useEffect } from 'react'
-import {
-  View, StyleSheet, Dimensions, StatusBar,
-} from 'react-native'
-import { TabView, SceneMap, TabBar } from 'react-native-tab-view'
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-import SplashScreen from 'react-native-splash-screen'
-import {
-  BannerAd, BannerAdSize,
-} from '@react-native-firebase/admob'
-import screens from './index'
-import AppConfig from '../utils/AppConfig'
+import React, {useState, useEffect} from 'react';
+import {View, StyleSheet, Dimensions, StatusBar} from 'react-native';
+import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import SplashScreen from 'react-native-splash-screen';
+import {BannerAd, BannerAdSize} from '@react-native-firebase/admob';
+import screens from './index';
+import AppConfig from '../utils/AppConfig';
 
-const { width } = Dimensions.get('window')
+const {width} = Dimensions.get('window');
 const tabViewConfig = {
   index: 1,
   routes: [
-    { key: 'first', icon: 'format-list-bulleted-square' },
-    { key: 'second', icon: 'home' },
-    { key: 'third', icon: 'trending-up' },
+    {key: 'first', icon: 'format-list-bulleted-square'},
+    {key: 'second', icon: 'home'},
+    {key: 'third', icon: 'trending-up'},
+    {key: 'four', icon: 'web'},
   ],
-}
+};
 const MainScreen = () => {
-  const [navigationState, setNavigationState] = useState(tabViewConfig)
-  const [isShowAdmod, setIsShowAdmod] = useState(true)
+  const [navigationState, setNavigationState] = useState(tabViewConfig);
+  const [isShowAdmod, setIsShowAdmod] = useState(true);
 
   useEffect(() => {
-    SplashScreen.hide()
-  }, [])
+    SplashScreen.hide();
+  }, []);
 
-  const renderIcon = ({ route, focused, color }) => (
-    <MaterialCommunityIcons name={route.icon} size={28 / 375 * width} color={color} />
-  )
+  const renderIcon = ({route, focused, color}) => (
+    <MaterialCommunityIcons
+      name={route.icon}
+      size={(28 / 375) * width}
+      color={color}
+    />
+  );
 
   const renderCustomeTabBar = props => (
     <TabBar
       {...props}
-      indicatorStyle={{ backgroundColor: '#fff' }}
-      style={{ backgroundColor: '#222831' }}
+      indicatorStyle={{backgroundColor: '#fff'}}
+      style={{backgroundColor: '#222831'}}
       renderIcon={renderIcon}
       renderLabel={() => null}
-      tabStyle={{ height: 50 / 375 * width }}
-      renderBadge={({ route }) => {
-        if (route.key === 'third') {
-          return
+      tabStyle={{height: (50 / 375) * width}}
+      renderBadge={({route}) => {
+        if (route.key === 'four') {
+          return;
         }
         return (
-          <View style={{
-            width: 1 / 375 * width,
-            height: 30 / 375 * width,
-            backgroundColor: '#fff',
-            alignItems: 'center',
-            marginTop: 10 / 375 * width,
-          }}
+          <View
+            style={{
+              width: (1 / 375) * width,
+              height: (30 / 375) * width,
+              backgroundColor: '#fff',
+              alignItems: 'center',
+              marginTop: (10 / 375) * width,
+            }}
           />
-        )
+        );
       }}
     />
-  )
+  );
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{flex: 1}}>
       <StatusBar hidden />
       <TabView
         renderTabBar={renderCustomeTabBar}
@@ -68,12 +70,13 @@ const MainScreen = () => {
           first: screens.CategoryScreen,
           second: screens.HomeScreen,
           third: screens.TrendingScreen,
+          four: screens.RatingScreen,
         })}
-        onIndexChange={index => setNavigationState({ ...navigationState, index })}
-        initialLayout={{ width }}
+        onIndexChange={index => setNavigationState({...navigationState, index})}
+        initialLayout={{width}}
         swipeEnabled
       />
-      {isShowAdmod && (
+      {/* {isShowAdmod && (
         <BannerAd
           unitId={AppConfig.ADMOD_APP_ID}
           size={BannerAdSize.SMART_BANNER}
@@ -90,8 +93,8 @@ const MainScreen = () => {
             setIsShowAdmod(false)
           })}
         />
-      )}
+      )} */}
     </View>
-  )
-}
-export default MainScreen
+  );
+};
+export default MainScreen;
